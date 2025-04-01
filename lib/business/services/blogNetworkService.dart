@@ -4,4 +4,5 @@ import '../models/user.dart';
 
 abstract class BlogNetworkService{
   Future<User> authentifier(Authentication data);
+
 }
