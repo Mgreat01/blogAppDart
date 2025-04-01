@@ -23,7 +23,7 @@ class User {
     required this.token,
   });
 
-  factory User.fromMap(Map<String, dynamic> json) => User(
+  factory User.fromMap(Map json) => User(
     id: json["id"],
     name: json["name"],
     email: json["email"],

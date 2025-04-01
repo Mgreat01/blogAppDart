@@ -7,12 +7,12 @@ class Authentication {
     required this.password,
   });
 
-  factory Authentication.fromJson(Map<String, dynamic> json) => Authentication(
+  factory Authentication.fromJson(Map json) => Authentication(
     email: json["email"],
     password: json["password"],
   );
 
-  Map<String, dynamic> toJson() => {
+  Map toJson() => {
     "email": email,
     "password": password,
   };
