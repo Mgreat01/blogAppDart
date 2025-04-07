@@ -1,19 +1,16 @@
-class Authentication {
+class Authentification {
   String email;
   String password;
 
-  Authentication({
+  Authentification({
     required this.email,
-    required this.password,
+    required this.password
   });
 
-  factory Authentication.fromJson(Map json) => Authentication(
-    email: json["email"],
-    password: json["password"],
-  );
-
-  Map toJson() => {
-    "email": email,
-    "password": password,
-  };
+  Map toJson() {
+    return {
+      "email": email,
+      "password": password
+    };
+  }
 }

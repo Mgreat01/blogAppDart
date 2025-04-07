@@ -1,22 +1,19 @@
 import 'dart:convert';
+
 import 'package:blog_mobile/business/models/user.dart';
-import 'package:blog_mobile/business/services/blogLocalService.dart';
+//import 'package:app/framework/blogLocalServiceImpl.dart';
 import 'package:get_storage/get_storage.dart';
 
-class BlogLocalNetworkServiceImpl implements BlogLocalService {
+import '../business/services/blogLocalService.dart';
+
+class BlogLocalServiceImpl implements BlogLocalService {
   GetStorage? box;
-  BlogLocalNetworkServiceImpl({this.box});
-
-
+  BlogLocalServiceImpl({this.box});
   @override
-  Future<bool> sauvergarderUser(User user) async {
+  Future<bool> sauvergaderUser(User user) async {
     var data = user.toMap();
-    await box?.write("user",jsonEncode((data)));
-
-    return true;
-
+   await box?.write("user", jsonEncode(data));
+   return true;
   }
-
-
 
 }

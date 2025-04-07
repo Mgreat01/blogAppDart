@@ -1,6 +1,5 @@
-import '../models/user.dart';
+import 'package:blog_mobile/business/models/user.dart';
 
-abstract class BlogLocalService {
-  Future <bool> sauvergarderUser ( User user);
-
+abstract class BlogLocalService{
+  Future<bool> sauvergaderUser(User user);
 }

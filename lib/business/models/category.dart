@@ -1,24 +1,13 @@
 class Category {
-  int? id;
-  String? name;
-  String? description;
+  int id;
+  String name;
+  String description;
 
   Category({
-    this.id,
-    this.name,
-    this.description,
+    required this.id,
+    required this.name,
+    required this.description,
   });
-
-  Category copyWith({
-    int? id,
-    String? name,
-    String? description,
-  }) =>
-      Category(
-        id: id ?? this.id,
-        name: name ?? this.name,
-        description: description ?? this.description,
-      );
 
   factory Category.fromMap(Map<String, dynamic> json) => Category(
     id: json["id"],
